@@ -2,10 +2,12 @@
 
 // Complete this algo
 const binarySearch = (array, target) => {
+  if (typeof target === 'object') return 'wrong type of input';
   const middle = Math.floor(array.length / 2);
   if (target === array[middle]) {
     return true;
   }
+  
   if (array.length <= 1) {
     return false;
   }
